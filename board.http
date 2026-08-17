@@ -1,0 +1,93 @@
+POST http://localhost:8080/api/boards
+Content-Type: application/json
+
+{
+  "title": "Spring Boot 게시판",
+  "content": "Spring Boot 테스트",
+  "writer": "이용현"
+}
+
+###
+
+POST http://localhost:8080/api/boards
+Content-Type: application/json
+
+{
+  "title": "JPA 학습",
+  "content": "JPA 테스트",
+  "writer": "이용현"
+}
+
+###
+
+POST http://localhost:8080/api/boards
+Content-Type: application/json
+
+{
+  "title": "Spring Data JPA",
+  "content": "Repository 테스트",
+  "writer": "이용현"
+}
+
+###
+
+### 1페이지 - 2개씩 조회
+GET http://localhost:8080/api/boards?page=1&size=2
+
+###
+
+### 2페이지 - 2개씩 조회
+GET http://localhost:8080/api/boards?page=2&size=2
+
+###
+
+### Spring 제목 검색 + 페이징
+GET http://localhost:8080/api/boards?keyword=Spring&page=1&size=2
+
+###
+
+POST http://localhost:8080/api/boards
+Content-Type: application/json
+
+{
+  "title": "Spring Boot 페이징 테스트",
+  "content": "첫 번째 페이징 테스트 게시글입니다.",
+  "writer": "이용현"
+}
+
+###
+
+POST http://localhost:8080/api/boards
+Content-Type: application/json
+
+{
+  "title": "JPA Repository 테스트",
+  "content": "두 번째 페이징 테스트 게시글입니다.",
+  "writer": "이용현"
+}
+
+###
+
+POST http://localhost:8080/api/boards
+Content-Type: application/json
+
+{
+  "title": "Spring Data JPA 검색",
+  "content": "검색과 페이징을 함께 테스트합니다.",
+  "writer": "이용현"
+}
+
+###
+
+GET http://localhost:8080/api/boards/999999
+
+###
+
+POST http://localhost:8080/api/boards
+Content-Type: application/json
+
+{
+  "title": "",
+  "content": "",
+  "writer": ""
+}
